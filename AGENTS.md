@@ -35,7 +35,7 @@ When recording a comparison, capture:
 
 Keep planned assignments separate from verified contributions, and planned dates separate from actual dates. Distinguish implemented functionality from tested, evaluated, or deployed functionality. Preserve scope changes and their documented rationale.
 
-Do not infer authorship, completion dates, or successful delivery from code presence, file timestamps, or migration names. At workspace initialization, the local Git history contains one import commit; it does not establish the original development history or individual contributions. Reassess if additional history becomes available. Use attributable records, meeting minutes, original commits or pull requests, and explicit user confirmations when available; identify their evidentiary limits.
+Do not infer authorship, completion dates, or successful delivery from code presence, file timestamps, or migration names. The report workspace initially exposed an import commit. On 20 September 2026, the nested `ntg-agent/` repository and twelve original GitHub PRs were inspected: application history and contributor attribution are available in `report/data/github-history.json` and `KB/github-delivery-history.md`. Keep report-workspace history distinct from application history. Use commit-author timestamps for recorded changes and GitHub merge timestamps for integration; neither establishes continuous effort or deployment acceptance. Use attributable records, meeting minutes, original commits or pull requests, and explicit user confirmations when available; identify their evidentiary limits.
 
 Never invent measurements, experiment outcomes, citations, meeting minutes, sponsor feedback, or personal contributions. Label unsupported statements as unverified and identify what evidence is needed. Keep evaluation targets distinct from measured results, and record the setup and source for any reported measurement.
 
@@ -66,11 +66,11 @@ Follow the supplied template, including front matter, contents, lists of figures
 8. Appendices.
 9. Meeting journals.
 
-Use the assessment's recommended section lengths as guidance rather than inventing a fixed total page limit. Allocate appropriate analytical depth to Solution Design and Results, which account for 40% and 30% of the rubric respectively.
+For the current expanded working draft, the user has explicitly deferred page-limit optimisation to prioritise depth and consolidation. Retain the final submission limit recorded in `process.md` for the later editing pass. Use the assessment's recommended section lengths as guidance. Allocate appropriate analytical depth to Solution Design and Results, which account for 40% and 30% of the rubric respectively.
 
 Write the report in academic English with precise, readable sentences and logical transitions. Develop a connected argument from the problem and research gap through design decisions, implementation, evaluation, and limitations. Explain technical choices and tradeoffs at the level needed by an academic reader; avoid unnecessary implementation detail and unsupported promotional claims.
 
-Use IEEE citations and references. Verify that each cited source supports the associated claim. Clearly separate prior research, the team's work, and proposed future work. Present results against the agreed deliverables and success criteria, including unmet goals and limitations.
+Use IEEE citations and references. Verify that each cited source supports the associated claim. Select credible, directly relevant sources rather than maximizing reference count. Prefer original research for methods and official documentation for framework/protocol behaviour; use independent evidence for comparative performance claims. There is no reference-count quota. Clearly separate prior research, the team's work, and proposed future work. Present results against the agreed deliverables and success criteria, including unmet goals and limitations.
 
 Write reflection from the team's collective perspective, objectively and constructively. Keep factual individual-contribution tracking distinct from reflection; do not use reflection to blame or criticize individuals. Include authentic meeting journals when supplied and flag missing records rather than fabricating them.
 

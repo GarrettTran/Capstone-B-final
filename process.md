@@ -22,11 +22,11 @@ Keep these categories separate in working notes:
 3. **Proposed reconstruction:** plausible retrospective wording prepared for team review. Dates, attendance, weekly sequencing, action ownership, and deadlines remain unverified until checked.
 4. **Open:** unavailable, inconsistent, or awaiting clarification.
 
-Use the completion plan as the planned baseline, not as proof of delivery. Review original GitHub PRs/commits before making detailed contribution or date claims. Do not equate commit counts with individual effort. No GitHub verification has been completed as part of this update.
+Use the completion plan as the planned baseline, not as proof of delivery. Review original GitHub PRs/commits before making detailed contribution or date claims. Do not equate commit counts with individual effort. Twelve original GitHub PRs and their full commit lists were retrieved and matched to local application integration commits on 20 September 2026; see Section 12 and `KB/github-delivery-history.md`.
 
 ## 3. Member responsibilities
 
-The user confirmed the following primary areas. Supporting roles, exact dates, and PR-level attribution remain to be validated.
+The user confirmed the following primary areas. Supporting roles and PR integration dates are now corroborated by the GitHub review in Section 12; exact effort and task-start dates are not inferred.
 
 | Member | GitHub identity supplied | Primary contribution area |
 | --- | --- | --- |
@@ -35,7 +35,7 @@ The user confirmed the following primary areas. Supporting roles, exact dates, a
 | Nguyen Dinh Minh Chau | `Annie-Chau` | LightRAG, document isolation, and access control, jointly with An |
 | Nguyen Tien | `TienNgen` | AG-UI and agent skills defined through `SKILL.md` |
 
-Treat `An Vu Gia` as a supplied identity/display-name alias until its relationship to GitHub commits is confirmed. Do not invent a split between An and Chau or assign historical supporting work solely from these broad roles. Use `Requirements/info.md` for student IDs and supervisor names.
+The retrieved PR records use `AnVuGia`, while linked commits use `PepeDaFrog` and the integration commit name `An Vu`, consistent with the user-confirmed An identity. Preserve these observed identifiers. Derive supporting work from selected commits rather than these broad responsibility areas. Use `Requirements/info.md` for student IDs and supervisor names.
 
 ## 4. Confirmed design changes and report implications
 
@@ -72,11 +72,11 @@ No attributable sponsor feedback, pushback, or acceptance record was supplied in
 
 ## 6. Evaluation status and writing approach
 
-The user confirms that formal benchmarking and AI-output evaluation remain incomplete because the team lacked time to research and establish the evaluation properly. **Defer benchmark execution and detailed experiment planning for the current writing pass.** Do not block design/documentation work on it and do not claim that the planned evaluation has been completed.
+Earlier, the user reported that formal benchmarking and AI-output evaluation were incomplete because the team lacked time to research the evaluation properly. On 20 September 2026, the user supplied `Requirements/NTG-Agent-Retrieval-Trials.pdf`, which reports three preliminary retrieval trials. Update the narrative: preliminary retrieval evidence exists, while the formal planned evaluation and valid human answer-quality scoring remain incomplete. **Defer new benchmark execution for the current writing pass.** Review existing evidence and request missing records without blocking design/documentation work. See `KB/retrieval-trials-review.md` for findings and claim boundaries.
 
-Retain the completion plan's six metric groups as original commitments: retrieval quality, ingestion latency, TTFT/full-response latency, availability, conversation cost, and quality gates. Their targets remain targets. This update supplies no measured results; CI evidence may be checked separately, but do not infer it from the presence of workflow files.
+Retain the completion plan's six metric groups as original commitments: retrieval quality, ingestion latency, TTFT/full-response latency, availability, conversation cost, and quality gates. Their targets remain targets. The supplied trial PDF reports retrieval hit-rates, latency comparisons and sampled backend availability; these are summary-reported values, not independently recomputed results. They do not establish achievement of all planned targets. CI evidence may be checked separately, but do not infer it from the presence of workflow files.
 
-Write Results around verified deliverables, documented functional examples, deviations from the plan, and limitations of the available evidence. Include a clear statement that formal answer-quality comparison has not been completed. Discuss resulting uncertainty and future evaluation without fabricating scores, latency percentiles, uptime, cost savings, or pass/fail outcomes. Do not call the product production-ready merely because that milestone date has passed.
+Write Results around verified deliverables, documented functional examples, deviations from the plan, and limitations of the available evidence. Include the preliminary retrieval trials with their small-corpus and cache limitations, and clearly state that formal human answer-quality comparison has not been completed. Discuss resulting uncertainty and future evaluation without fabricating scores, latency percentiles, uptime, cost savings, or pass/fail outcomes. Do not call the product production-ready merely because that milestone date has passed.
 
 ## 7. Timeline and weekly meeting drafts
 
@@ -133,13 +133,61 @@ The user requested draft randomization; this table records the resulting editabl
 
 Keep each writing increment reviewable. Preserve source requirements and application code. Do not modify the application merely to make it match a report claim.
 
-## 9. Review checklist and open items
+## 9. Reference selection
+
+User preference confirmed on 20 September 2026: cite where claims need support and choose credible sources rather than collecting large numbers of references. Do not treat the earlier suggested 15-25 sources as a quota. Prefer original research for methods and official documentation for protocol/framework behaviour. Use independent research for comparative performance claims rather than relying on vendor promotion. Verify relevance, version/date and the exact claim supported. Keep literature findings separate from NTG Agent measurements. The local retrieval-trial PDF is project evidence, not external validation of the platform.
+
+## 10. Review checklist and open items
 
 - Confirm the twelve-week calendar and each meeting's actual existence, attendance, timing, and action outcomes.
 - Verify the confirmed outer-to-inner delegation flow and client permission enforcement in code. Separately check the planned many-to-many storage mapping; do not equate it with agents-as-tools delegation.
-- Verify broad contribution areas against original GitHub history; clarify individual versus shared responsibility and local setup ownership.
+- GitHub contribution review completed for twelve PRs: An owns the main installer changes; Chau adds macOS/demo-plan work. Validate additional effort or contributions outside the selected records if needed.
 - Confirm remaining feature/deployment status, actual sponsor comments, and any additional reflection episodes.
 - Verify provider deployment names and resource support wording; confirm exact submission time and programme metadata.
-- Treat formal evaluation as incomplete unless new measured evidence is supplied.
+- Obtain the retrieval-trial evidence bundle, gold mappings, metric definition and harness configuration. Use the existing PDF as preliminary summary evidence; keep human answer-quality evaluation and other unsupported targets incomplete.
 - Compile a week with `typst compile report/meeting-minutes/week-01.typ output/pdf/meeting-minutes/week-01.pdf` (substitute 01-12). For the optional combined PDF, use `typst compile report/meeting-minutes.typ output/pdf/meeting-minutes.pdf`. Render and check clipping, row wrapping, footer placement, numbering, and provisional labels.
 - Final report acceptance requires the fewer-than-20-page rule, traceable factual claims, consistent results across sections, and reviewed meeting records. Working drafts may contain clearly labelled unresolved items.
+
+## 11. First report draft — 20 September 2026
+
+The user requested a complete trial draft, with emphasis on the retrieval trials' strengths and constructive discussion of the remaining evaluation needs. Avoid the label “weak benchmark”; preserve the scope and limitations of the measurements.
+
+- Source entry point: `report/main.typ`; section files: `report/sections/`; IEEE bibliography: `report/references.bib`.
+- Review PDF: `output/pdf/capstone-final-report-draft.pdf`.
+- Five vector figures: system architecture, authorised inner-agent retrieval, planned delivery Gantt chart, retrieval hit rates and relative retrieval latency.
+- Five main-body tables plus two appendix tables cover alternatives, scope changes, contributions, trial conditions, success criteria, source paths and aggregate data.
+- `KB/report-evidence.md` records the implementation evidence and its limits. `report/README.md` documents editing, builds and remaining review items.
+- The initial main body occupies 14 pages including visuals, below the fewer-than-20-page requirement. Full PDF is 33 pages including excluded matter and the twelve independent journal drafts.
+- The Gantt chart preserves planned dates from the completion plan; it does not infer individual or actual completion intervals. The evidence cutoff is 20 September; the 22 September showcase remains planned.
+- Rechecked ingestion target units against the completion plan: <100 KB, 100 KB–1 MB and >1 MB, rather than unspecified “100k/1M” units.
+- The PDF build and visual review validate document presentation only. No application checks or benchmark rerun were performed.
+
+
+## 12. Feature timeline and GitHub reconciliation — 20 September 2026
+
+The user requested a more detailed Section 4.7 backed by original GitHub history. The application repository has its own complete, non-shallow history; the earlier report-workspace import limitation must not be applied to it.
+
+- Retrieved PRs 261, 264, 265, 277, 278, 280, 281, 282, 285, 286, 287 and 288 with complete commit arrays. Merge SHAs match the local application history ending at `7789ed0` (13 September).
+- Preserved selected metadata and commit records in `report/data/github-history.json`, the PR register in CSV, and 22 feature mappings in `report/data/delivery-timeline.json`. No credentials or private email fields were retained.
+- Section 4.7 now spans four pages: foundations Gantt, product/hardening Gantt, plan-versus-delivery comparison, and primary/supporting contributions. All dates are converted to UTC+7.
+- Commit points and their enclosing spans show recorded change dates, not continuous work; dotted lines show the gap to integration; filled diamonds show actual PR merges. Planned phase windows have a separate hatch/marker encoding.
+- Contributions now reflect cross-support: An's early model discovery and provider routing; Chau's macOS setup/demo plan; Tien's removal of legacy memory/search and documentation updates. Supervisor repository activity is recorded separately from student work and meeting attendance.
+- Provider/model PR 287 merged on 3 September, eight calendar days after the 26 August Phase 2 milestone. Its live thinking probe was committed on 26 August. The delay's cause is not established by these records.
+- Skills PR 286 merged on 25 August, before the Phase 2 milestone; access PR 277 merged on 23 July. Per-agent knowledge topology still differs from the plan's many-to-many shared-space commitment.
+- Source conflict: the Phase 3 graphic depicts a later endpoint than the plan's prose/table date of 9 September. The report explicitly uses the textual baseline and does not invent exact subtask due dates from the inconsistent image.
+- Revised PDF: 17 main-body pages including figures/tables, 37 total physical pages. Six figures, six main-body tables and three appendix tables. Compile and visual checks completed; no application tests or benchmark rerun performed.
+
+
+## 13. Expanded, consolidated draft — 20 September 2026
+
+The user approved the existing content, requested deeper alignment with reviewed GitHub commits and a stronger executive summary, context/background and consolidated literature review. Page-limit optimisation is explicitly deferred for this working draft; the original final-submission constraint remains for a later editing pass.
+
+- Rechecked remote `main`: still `7789ed0` (13 September), matching the local application. No newer upstream integration was discovered. `report/data/github-main-check.json` records this read-only check.
+- Rewrote Section 1 around the application need, integration contribution, GitHub-backed delivery and bounded retrieval outcomes.
+- Expanded Section 2 to three pages covering inherited platform context, requirement-derived scenarios, stakeholder needs, objectives, constraints and practical significance. Scenarios are labelled illustrative, not sponsor interviews.
+- Consolidated Section 3 into five pages: retrieval/evidence use; permission and orchestration; platform comparison; interaction and skills; synthesis into DQ1–DQ5. Added only two targeted academic sources and upgraded RAGAs to its published EACL proceedings citation.
+- Expanded Sections 4.4–4.6 using final code and PR evidence, including provider lifecycle, live probes, progressive skill loading, template validation, client handling, gateway/provisioning and default-agent setup.
+- Added a Results accomplishment matrix linked to the design questions and qualitative analysis of access-aware delegation, provider compatibility and interactive correctness. Retrieval values are unchanged; PR test claims remain attributed development records.
+- Durable reasoning and source map: `KB/literature-and-needs-synthesis.md`. Added source files: `report/sections/04-runtime.typ` and `05-accomplishments.typ`.
+- Expanded draft: 25 main-body pages and 45 physical pages, with six figures and thirteen tables (ten main-body, three appendix). This is intentionally an expansion draft, not the page-budgeted submission version.
+- Compiled and visually reviewed the expanded sections and bibliography. No application tests, deployment checks or benchmark reruns were performed.
