@@ -1,0 +1,7 @@
+{
+  "charts": "Requirements/NTG-Agent-Retrieval-Trials.pdf",
+  "gantt": "github-history.json and delivery-timeline.json; 12 PRs, selected feature commits, UTC+7; Completion Plan pp. 8-10 textual baseline with visual discrepancy documented",
+  "architecture": "AgentFactory, AgentToolPlugin, LightRagClientFactory, LightRagContainerManager, project docs; see KB/report-evidence.md",
+  "matplotlib": "3.10.6",
+  "note": "Commit-date spans are not continuous labour intervals; merge dates are not deployment acceptance. SVG text converted to paths for portable rendering."
+}
