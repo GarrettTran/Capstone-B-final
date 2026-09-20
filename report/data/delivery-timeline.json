@@ -1,0 +1,583 @@
+{
+  "timezone": "Asia/Ho_Chi_Minh",
+  "source": "github-history.json",
+  "selection": "Curated feature commits, excluding inherited PR ancestors unless directly relevant. Author date retained; committer date also stored in raw history. Merge marker is GitHub merged_at converted to UTC+7.",
+  "features": [
+    {
+      "id": "F01",
+      "feature": "LightRAG + PostgreSQL",
+      "contributors": "Chau",
+      "pr": 265,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-05-14",
+      "last_recorded": "2026-05-18",
+      "commit_dates": [
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18"
+      ],
+      "merged": "2026-07-17",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/265",
+      "selected_shas": [
+        "f2d84606ce168ac09775f69f2883e9f25c7f0ac6",
+        "8314d041b9654089a33d8b87ee6d743d322e3c97",
+        "363f8c4ad0c6812a3d08b64aafc457d9001f3248",
+        "cb8a5cc266916c48715f5ac714949ad1add2651c"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F02",
+      "feature": "Per-agent containers / network",
+      "contributors": "Chau",
+      "pr": 265,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-06-02",
+      "last_recorded": "2026-06-03",
+      "commit_dates": [
+        "2026-06-02",
+        "2026-06-03"
+      ],
+      "merged": "2026-07-17",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/265",
+      "selected_shas": [
+        "cf83c4f312dbba21610f0699d19930a991c4fb45",
+        "dddff4b946a93c91ba4a44b3ce0cf1d45f682f70",
+        "a24dd212522e2dc0fed5cd8448de9f47f04a250d",
+        "5b718816b5d333ae91b7a4794c808fe38e484aa3",
+        "c4863c7288c34cc03b8eac751216efa0463e2eff",
+        "50949fb0e5985652ff68f9e575e70e2b13fc2497",
+        "89da3ae806eb49ce11448039248fe4bb1cd0ea3b"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F03",
+      "feature": "Document status / event worker",
+      "contributors": "Chau",
+      "pr": 265,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-06-07",
+      "last_recorded": "2026-06-07",
+      "commit_dates": [
+        "2026-06-07"
+      ],
+      "merged": "2026-07-17",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/265",
+      "selected_shas": [
+        "777281072d7a4502d745eaa394ca4e83ad64f53f",
+        "c092db12e396ef621e59488294b801505c9a4d43",
+        "e6906dd6056022a8ca90ff2472518f23a56434d8",
+        "3e496ff3f1ab909f7604239010be207f0c254042",
+        "c31f6b727303fddf54b8256467887be27190b475",
+        "08698477a322a2182a175e801c680fa5568f2611"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F04",
+      "feature": "Idle-container shutdown",
+      "contributors": "An",
+      "pr": 265,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-06-07",
+      "last_recorded": "2026-06-07",
+      "commit_dates": [
+        "2026-06-07"
+      ],
+      "merged": "2026-07-17",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/265",
+      "selected_shas": [
+        "7dedbbf12acf5913eddedc2bf76d2c0bd5f59849"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F05",
+      "feature": "Agents-as-tools / bindings",
+      "contributors": "Khang",
+      "pr": 261,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-05-31",
+      "last_recorded": "2026-06-15",
+      "commit_dates": [
+        "2026-05-31",
+        "2026-06-01",
+        "2026-06-08",
+        "2026-06-15"
+      ],
+      "merged": "2026-06-19",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/261",
+      "selected_shas": [
+        "13cb1d863110cdfd700a20a75046f40642199cfb",
+        "c06666d795a47c54c70c056d3b64a986c815b5c6",
+        "30c3661b2c5f21c765de541eaa5505c87c294984",
+        "4c37def378e051b409541b62d52f26d0774fc67e",
+        "f61ef29959b6b1bd0e43957262576fa85855a4a9",
+        "d45c2a4ec8efcb382eca7a05fbe5f63fdb86ef10",
+        "2d88bd79612ddfd8b81c780ec63708ddca7aa6c7",
+        "29e86cc817d1b747a66586fbd531345b3e209868"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F06",
+      "feature": "AG-UI client / streaming",
+      "contributors": "Tien",
+      "pr": 264,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-06-07",
+      "last_recorded": "2026-07-06",
+      "commit_dates": [
+        "2026-06-07",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-07-06"
+      ],
+      "merged": "2026-07-07",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/264",
+      "selected_shas": [
+        "0fa504e0538e8c561a532e7e486543a155c744a2",
+        "2f8049b1ad5b0ea3a6936fa6df221b6fe8fb80b8",
+        "5d8ff9345953d741b5c42eb0ae63f5cb299f9b2e",
+        "192bb6246bf84e1a7bd5b13d963c608419a34ea0",
+        "ebd49d59d87a6689b98c2fabefb6bb28dca8cf3d",
+        "5ce92386396c3813b623e85cba6f24adceb10259",
+        "523252a0857fa8ee4d9e83e3ba44b872ae303ea6",
+        "d231286fc9a21aa6d300fe95af4f8518aa2571f6",
+        "2c7158e5622323ec6e4138dd6c65571922396521",
+        "97bd106d96febcbd82add29018f971ccfc470b50",
+        "db4c0bcea9b37ba0ba604463394d61ef93fb73b5"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F07",
+      "feature": "Generative cards / A2UI",
+      "contributors": "Tien",
+      "pr": 264,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-06-22",
+      "last_recorded": "2026-06-29",
+      "commit_dates": [
+        "2026-06-22",
+        "2026-06-29"
+      ],
+      "merged": "2026-07-07",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/264",
+      "selected_shas": [
+        "06a1ad66e0ec846a33ed25019cec2554d6757600",
+        "a2d769bae900dd2da21af4ea9495763e33810d52",
+        "78fd9a40ac68b403dc394a6384aa28efb75dbda7",
+        "8ce4c67e7d45254524b5dc95fb07a8027fd52f5d",
+        "281918093c4c73d5d21af51f26f011798b0bd6ee"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F08",
+      "feature": "Retire legacy memory / search",
+      "contributors": "Chau + Tien",
+      "pr": 265,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-07-13",
+      "last_recorded": "2026-07-14",
+      "commit_dates": [
+        "2026-07-13",
+        "2026-07-14"
+      ],
+      "merged": "2026-07-17",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/265",
+      "selected_shas": [
+        "f7f465c9eed900ab65c7a2bcbe62635c5129da65",
+        "158f0ba75949d3d332408e2238e5ff59ac6db3dc",
+        "2a8a57fc45a5768b556589eb142426311108f02c",
+        "dfc9b80a6d3110b3e75f36cbcf5e0bdfb01767d8",
+        "c6d6e27e1cfbff0eda162021407052b7c4cdc43f"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F09",
+      "feature": "Role-gated agent access",
+      "contributors": "An",
+      "pr": 277,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-06-15",
+      "last_recorded": "2026-07-22",
+      "commit_dates": [
+        "2026-06-15",
+        "2026-06-26",
+        "2026-07-22"
+      ],
+      "merged": "2026-07-23",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/277",
+      "selected_shas": [
+        "53de6aa312abac11b2b65ce78d4ebc63f938778a",
+        "65eb1b996348e99bc0b3e4f86d1835924dbbd326",
+        "2eecd6db66268c976ea1cd9e6a16899c6deb5e66"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F10",
+      "feature": "Initial model discovery",
+      "contributors": "An",
+      "pr": 277,
+      "additional_prs": [],
+      "panel": "foundation",
+      "first_recorded": "2026-06-21",
+      "last_recorded": "2026-06-21",
+      "commit_dates": [
+        "2026-06-21"
+      ],
+      "merged": "2026-07-23",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/277",
+      "selected_shas": [
+        "c311d21ed9478ecfa2ccbb969d81b3b127e27d35"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F11",
+      "feature": "Provider routing / client factories",
+      "contributors": "An",
+      "pr": 281,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-07-13",
+      "last_recorded": "2026-07-22",
+      "commit_dates": [
+        "2026-07-13",
+        "2026-07-18",
+        "2026-07-22"
+      ],
+      "merged": "2026-07-23",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/281",
+      "selected_shas": [
+        "2abee857cf5dfa287435d1d1c58100fc355ec04b",
+        "91db30fe48b786186cc2e0fc29bc2d0e61326ddf",
+        "5fc2acfb98ff2bbda39c487fa3018381c6afa7e3"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F12",
+      "feature": "Secret scan / scanner repair",
+      "contributors": "An",
+      "pr": 278,
+      "additional_prs": [
+        280
+      ],
+      "panel": "delivery",
+      "first_recorded": "2026-07-18",
+      "last_recorded": "2026-07-22",
+      "commit_dates": [
+        "2026-07-18",
+        "2026-07-22"
+      ],
+      "merged": "2026-07-22",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/278",
+      "selected_shas": [
+        "b67c3c0d821e0c757a898551ace574ca781e32e9",
+        "5093ffe1b5f76089e998e46a32d82cd5593da7fe",
+        "80a2b36ab5521c00b87d0b900f764d7f7e625b72",
+        "5cf761d6165129e8aea9de55fc25cba649034fff"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F13",
+      "feature": "Provisioning state / readiness",
+      "contributors": "Chau",
+      "pr": 282,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-07-19",
+      "last_recorded": "2026-08-16",
+      "commit_dates": [
+        "2026-07-19",
+        "2026-08-16"
+      ],
+      "merged": "2026-08-20",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/282",
+      "selected_shas": [
+        "f9cb3b1f8b7d4e31ebe7d0a7d054d8f073887a2a",
+        "bdf8962b831414616884f99588e71a42f3658a70",
+        "54b8ed98a2cf950085728813d6e26bf19504e459",
+        "4f2afd13467f28521473f60c4ed3d90876a00782",
+        "2cf61c97989e118712c5b8534c168c5ed439f309"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F14",
+      "feature": "VM migration / service structure",
+      "contributors": "Chau + Sieu Anh",
+      "pr": 282,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-08-02",
+      "last_recorded": "2026-08-16",
+      "commit_dates": [
+        "2026-08-02",
+        "2026-08-16"
+      ],
+      "merged": "2026-08-20",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/282",
+      "selected_shas": [
+        "e8e6f6324db29fd309f7aa5337a6d810c1abb9e5",
+        "ef78a16dfe73414a72a8ad2e733481f0c5f4db7c",
+        "833d1105327af03c0f4781cd1d0bc7120245f243",
+        "ff337faed52f0445bdf32d7de00da4313da739a5",
+        "cc284ab17ae43bbca26c1ea11922921fb254c6e6"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F15",
+      "feature": "Agent gateway / port-ledger removal",
+      "contributors": "An",
+      "pr": 282,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-08-04",
+      "last_recorded": "2026-08-05",
+      "commit_dates": [
+        "2026-08-04",
+        "2026-08-05"
+      ],
+      "merged": "2026-08-20",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/282",
+      "selected_shas": [
+        "9d5caf9a06eb44900d775ea74bdcfc3291a526f0",
+        "f201be5d602c62e3ac4a7d7c5c20069385350ee1",
+        "90e6b0670d96bb8e468d6b1737a15a0fbd9833b4",
+        "6558f1c43aa745dd25723b20861c94dbbdee4f01",
+        "4beaad9f1141c9c4052c7ca9d7a72406cb26a06d"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F16",
+      "feature": "Global providers / model catalogue",
+      "contributors": "Khang",
+      "pr": 287,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-07-20",
+      "last_recorded": "2026-08-26",
+      "commit_dates": [
+        "2026-07-20",
+        "2026-07-21",
+        "2026-08-20",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ],
+      "merged": "2026-09-03",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/287",
+      "selected_shas": [
+        "f19a588c77608197e427a7bee36c00d9fae96fd1",
+        "fecc71a3317d30346c647df30195dea508878604",
+        "aff84722574d3de851760b37ad3dc5dc08ae65b6",
+        "35d143a33b467f271ab89cf4b9cb9c30a28aa21a",
+        "b3a89d73b2be2b200955690e4d5440009caf95bb",
+        "370c1ec7449f762abce1ca3948531a27fdb37b6f",
+        "8bf22b32dfdeaf646496b5a5c80395dbcc714f59",
+        "c4a5165903c2f2ac3af8b09caad0fb3d3b57bdb4",
+        "2e769f70fb663679704f7463f6fcca59f2bd13e0"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F17",
+      "feature": "Live thinking compatibility probe",
+      "contributors": "Khang",
+      "pr": 287,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-08-26",
+      "last_recorded": "2026-08-26",
+      "commit_dates": [
+        "2026-08-26"
+      ],
+      "merged": "2026-09-03",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/287",
+      "selected_shas": [
+        "7af467b82ee264c167dd7b5fff1dd88ff1460d8f"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F18",
+      "feature": "Skills storage / import / runtime",
+      "contributors": "Tien",
+      "pr": 286,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-08-10",
+      "last_recorded": "2026-08-24",
+      "commit_dates": [
+        "2026-08-10",
+        "2026-08-18",
+        "2026-08-24"
+      ],
+      "merged": "2026-08-25",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/286",
+      "selected_shas": [
+        "2b61da88d7397509829546ced536adfcbbf3c321",
+        "6d32bce884b0253e09aa10d40c7db5d4760fd78a",
+        "6e51e1ee37a7568dd329a727440371e34493fece",
+        "13279d00190c937b3ab21abffcac3e87fe071c18",
+        "418785bea9ed95336e2810748697e82695a3f0c5",
+        "d33e8b6dbf78fa3c7ce3879aef2ff667b5d6a526",
+        "292194b03614bada6a4b041ee85ec58ff0d5266c",
+        "82440271cb2447b69ba471a7d22e1b39f181d452",
+        "382655d8e3d3335bca8fde2cbe4559d14718c54b",
+        "24fd7bf8c585303a294ea00ba1517f7e18dbe7fd",
+        "ec65dda2fb45f846d263ab5fb81caec22d0c4059"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F19",
+      "feature": "Surface validation / UI hardening",
+      "contributors": "Tien",
+      "pr": 286,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-08-10",
+      "last_recorded": "2026-08-24",
+      "commit_dates": [
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-20",
+        "2026-08-24"
+      ],
+      "merged": "2026-08-25",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/286",
+      "selected_shas": [
+        "b2cc9c969297d78ad00347bb9aba5cedd348cb5e",
+        "23bcf08746f8b4e7440fb85b3c670bba1dda71bd",
+        "d534812554ab41312330e567701a06cc24fd909e",
+        "9563463b52182a1661fcfca2f7f6ec4d496eb06f",
+        "08c89f6ddb4e759d8feeaa62722cee17eac4afb3",
+        "5c23c96885a874d18eab187f19f8fb292b3ae9bb",
+        "7c33c46dc18838a4862b14b1889c78aa608d96c6",
+        "9e8ddfc815bd06f4401d22cefd537ac491b5e3a5",
+        "f7f97a35a7f02ba470623d45cc1d355492115fb0",
+        "fa6b6d117cc836802ef8e4ff65e79968b8265856",
+        "ec65dda2fb45f846d263ab5fb81caec22d0c4059"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F20",
+      "feature": "Installer / default-agent setup",
+      "contributors": "An",
+      "pr": 285,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-08-12",
+      "last_recorded": "2026-09-07",
+      "commit_dates": [
+        "2026-08-12",
+        "2026-08-19",
+        "2026-09-07"
+      ],
+      "merged": "2026-09-13",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/285",
+      "selected_shas": [
+        "b17a2e4c4167fc7524caa72a4c90db03c41b2f6b",
+        "869fa748888736207eb44e69a19f189c0e226db8",
+        "57a76382b419a59fe7f94bf4cf3a1baff4ee5a63",
+        "490925eef4664772635e42a077c92c64b1e97b33",
+        "a2631fc18e3b8205aac34c9567df530e72be3fa1",
+        "295c401be434a1b59bb0a8bd2828ce5bfa6dea9b",
+        "d953174bd36060c2ef30cf9f42167d585ec7344e",
+        "cc9cb6d0aa47982a37f943dd5ac1109a9bb01dc3",
+        "3966a781e5352f7bc05ee2e4db6ec7ad14966dff"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F21",
+      "feature": "macOS setup / showcase demo plan",
+      "contributors": "Chau",
+      "pr": 285,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-08-25",
+      "last_recorded": "2026-09-06",
+      "commit_dates": [
+        "2026-08-25",
+        "2026-09-06"
+      ],
+      "merged": "2026-09-13",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/285",
+      "selected_shas": [
+        "ee86b969c41e045cdd4c54640dd04075fd86f49a",
+        "5fdc798efbac23723867043bf74d2258aedbc64b",
+        "2e943d23581fa2813908914e9b35220401973254"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    },
+    {
+      "id": "F22",
+      "feature": "Dependency / integration maintenance",
+      "contributors": "Sieu Anh",
+      "pr": 288,
+      "additional_prs": [],
+      "panel": "delivery",
+      "first_recorded": "2026-08-30",
+      "last_recorded": "2026-09-03",
+      "commit_dates": [
+        "2026-08-30",
+        "2026-09-03"
+      ],
+      "merged": "2026-09-03",
+      "url": "https://github.com/nashtech-garage/ntg-agent/pull/288",
+      "selected_shas": [
+        "0324b948788adae0c18a467891a542815c0532d4",
+        "451b3b8ef729e71ac4d564a8fbe7745f12517b40",
+        "a75e580317a6b84359959399c68eef638141960b"
+      ],
+      "meaning": "Range of selected commit author dates; not a continuous effort or completion interval."
+    }
+  ],
+  "planned_phases": [
+    {
+      "name": "Phase 2",
+      "start": "2026-07-20",
+      "end": "2026-08-26"
+    },
+    {
+      "name": "Phase 3",
+      "start": "2026-08-17",
+      "end": "2026-09-09"
+    },
+    {
+      "name": "Phase 4",
+      "start": "2026-09-07",
+      "end": "2026-09-22"
+    }
+  ],
+  "baseline_conflict": "Completion plan prose and milestone table specify Phase 3 ending 9 September; its embedded Gantt depicts a later endpoint. Charts use the explicit prose/table dates; task-bar endpoints are not silently reconstructed."
+}

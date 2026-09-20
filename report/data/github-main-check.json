@@ -1,0 +1,84 @@
+{
+  "checked_on": "2026-09-20",
+  "repository": "nashtech-garage/ntg-agent",
+  "source": "https://api.github.com/repos/nashtech-garage/ntg-agent/commits?sha=main&per_page=15",
+  "head": "7789ed056a403486f094f81cfe50f37fedf1dd54",
+  "conclusion": "Remote main matches the previously inspected local application head; this revision consolidates newly reviewed history, not newly discovered upstream commits.",
+  "commits": [
+    {
+      "sha": "7789ed056a403486f094f81cfe50f37fedf1dd54",
+      "committed_at": "2026-09-13T01:23:32Z",
+      "subject": "[AI-ID] One-command local install: install.sh bootstrap + self-installing install-local.sh (#285)"
+    },
+    {
+      "sha": "33733bb9af91775f9fa3867b5025e8800c7a5d87",
+      "committed_at": "2026-09-03T04:19:20Z",
+      "subject": "Package upgrade and remove unused code block (#288)"
+    },
+    {
+      "sha": "9847237f3403d53c2fbb52caf23d42479c9bb75b",
+      "committed_at": "2026-09-02T22:33:09Z",
+      "subject": "feat: per-provider model management with thinking-mode gating (#287)"
+    },
+    {
+      "sha": "954f4970630cd3fa0b97440b69dddfa1747728af",
+      "committed_at": "2026-08-25T06:11:12Z",
+      "subject": "feat: Agent Skills,  validated A2UI surface templates bound per agent (#286)"
+    },
+    {
+      "sha": "4823553006be6c3e1f1b280796744bf517765695",
+      "committed_at": "2026-08-20T06:11:06Z",
+      "subject": "Refactor/migrate lightrag to vm (#282)"
+    },
+    {
+      "sha": "0443991afad425d633aa62e13641a685478eb255",
+      "committed_at": "2026-07-23T05:05:00Z",
+      "subject": "Feature/agent role access control (#277)"
+    },
+    {
+      "sha": "b8b23045535a1520f3fde33b75b76393cb277a95",
+      "committed_at": "2026-07-23T02:43:56Z",
+      "subject": "[AI-1] Fix Azure OpenAI v1 reasoning routing; extract two-axis provider client factories (#281)"
+    },
+    {
+      "sha": "21030d7cb08ba006587d0d88171f64b3df86e91b",
+      "committed_at": "2026-07-22T06:43:57Z",
+      "subject": "[CHORE-1] Add gitleaks nightly secret scan (#278)"
+    },
+    {
+      "sha": "1792969885fc0be71ba2a91cf487bcf93dd09c7e",
+      "committed_at": "2026-07-22T06:42:42Z",
+      "subject": "[AI-ID] Bump sonarscan-dotnet to v2.5.1 for Java 21 scanner (#280)"
+    },
+    {
+      "sha": "21c4684e96df9328ea3985f71821cdbd61b844b4",
+      "committed_at": "2026-07-16T22:22:27Z",
+      "subject": "Feature/memory 4 (#265)"
+    },
+    {
+      "sha": "ec4b312d51e43c472b8c25d7975dc1ddc4be52c8",
+      "committed_at": "2026-07-07T02:54:30Z",
+      "subject": "Feature/ag UI copilot kit (#264)"
+    },
+    {
+      "sha": "5ec09cdda2679d25b67a52464ea27bea71d1c901",
+      "committed_at": "2026-06-19T02:16:19Z",
+      "subject": "Agents/upgrade to agents as tools architecture (#261)"
+    },
+    {
+      "sha": "f559de51918f199c4e5c3d15bd74d49025bd66b1",
+      "committed_at": "2026-05-31T20:49:28Z",
+      "subject": "Upgrade packages version and sonar issues (#260)"
+    },
+    {
+      "sha": "a5d484c0202bf3f6a8bcbe10bef40c6918b07a56",
+      "committed_at": "2026-05-05T02:10:58Z",
+      "subject": "Upgrade OpenTelemetry.Exporter.OpenTelemetryProtocol to 1.15.3 (#251)"
+    },
+    {
+      "sha": "8992bfb8059375e8307dd7e0fc6ab53d3344ec4c",
+      "committed_at": "2026-04-19T22:50:03Z",
+      "subject": "Implement appearance and accent color (#250)"
+    }
+  ]
+}

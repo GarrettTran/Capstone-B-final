@@ -1,0 +1,13 @@
+pr,title,author,opened_utc7,merged_utc7,merged_by,merge_sha,url
+261,Agents/upgrade to agents as tools architecture,GarrettTran,2026-06-01,2026-06-19,thiennn,5ec09cdda2679d25b67a52464ea27bea71d1c901,https://github.com/nashtech-garage/ntg-agent/pull/261
+264,Feature/ag UI copilot kit,TienNgen,2026-06-12,2026-07-07,thiennn,ec4b312d51e43c472b8c25d7975dc1ddc4be52c8,https://github.com/nashtech-garage/ntg-agent/pull/264
+265,Feature/memory 4,AnVuGia,2026-06-29,2026-07-17,thiennn,21c4684e96df9328ea3985f71821cdbd61b844b4,https://github.com/nashtech-garage/ntg-agent/pull/265
+277,Feature/agent role access control,AnVuGia,2026-07-17,2026-07-23,thiennn,0443991afad425d633aa62e13641a685478eb255,https://github.com/nashtech-garage/ntg-agent/pull/277
+278,[CHORE-1] Add gitleaks nightly secret scan,AnVuGia,2026-07-18,2026-07-22,thiennn,21030d7cb08ba006587d0d88171f64b3df86e91b,https://github.com/nashtech-garage/ntg-agent/pull/278
+280,Bump sonarscan-dotnet to v2.5.1 (Java 21 scanner),AnVuGia,2026-07-22,2026-07-22,thiennn,1792969885fc0be71ba2a91cf487bcf93dd09c7e,https://github.com/nashtech-garage/ntg-agent/pull/280
+281,[AI-1] Fix Azure OpenAI v1 reasoning routing; extract two-axis provider client factories,AnVuGia,2026-07-22,2026-07-23,thiennn,b8b23045535a1520f3fde33b75b76393cb277a95,https://github.com/nashtech-garage/ntg-agent/pull/281
+282,Refactor/migrate lightrag to vm,Annie-Chau,2026-08-02,2026-08-20,thiennn,4823553006be6c3e1f1b280796744bf517765695,https://github.com/nashtech-garage/ntg-agent/pull/282
+285,[AI-ID] One-command local install: install.sh bootstrap + self-installing install-local.sh,AnVuGia,2026-08-19,2026-09-13,thiennn,7789ed056a403486f094f81cfe50f37fedf1dd54,https://github.com/nashtech-garage/ntg-agent/pull/285
+286,"feat: Agent Skills,  validated A2UI surface templates bound per agent",TienNgen,2026-08-20,2026-08-25,thiennn,954f4970630cd3fa0b97440b69dddfa1747728af,https://github.com/nashtech-garage/ntg-agent/pull/286
+287,feat: per-provider model management with thinking-mode gating,GarrettTran,2026-08-20,2026-09-03,thiennn,9847237f3403d53c2fbb52caf23d42479c9bb75b,https://github.com/nashtech-garage/ntg-agent/pull/287
+288,Package upgrade and remove unused code block,sieunhantanbao,2026-08-30,2026-09-03,thiennn,33733bb9af91775f9fa3867b5025e8800c7a5d87,https://github.com/nashtech-garage/ntg-agent/pull/288
