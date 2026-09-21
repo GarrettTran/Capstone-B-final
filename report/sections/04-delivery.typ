@@ -1,17 +1,18 @@
 #import "../style.typ": fig, tab
 == Delivery schedule and team responsibilities
 
+Four contribution areas support the configured-assistant workflow: Khang's delegation, An's access control, Chau's knowledge services, and Tien's interfaces and skills. Provider, lifecycle and setup work connect these capabilities. The timeline and contribution table retain shared work rather than implying exclusive ownership. @githubhistory
+
 === Reconstructing the feature timeline
 
-The delivery timeline is reconstructed from twelve GitHub pull requests (PRs), their commit lists and the corresponding integration commits in the local repository. The records cover all four student contributors and selected industrial-supervisor maintenance. The feature mapping identifies twenty-two workstreams rather than treating each large PR as a single feature. Dates are converted to Vietnam time (UTC+7). @githubhistory
+The timeline maps twelve GitHub pull requests (PRs) and their commits to twenty-two workstreams, covering the four students and selected industrial-supervisor maintenance. Dates use Vietnam time (UTC+7). @githubhistory
 
 @fig-foundations shows the foundations of the final solution. A coloured span connects the first and last selected commit-author dates for a feature; points identify the recorded change dates. The dotted segment leads to the PR's merge into main. These intervals describe the available development record, not continuous labour, exact task start dates or deployment acceptance. Shared commits inherited by stacked PRs are excluded from unrelated feature rows.
 
 #fig("assets/delivery-gantt-foundations.svg", [Feature-level Gantt: retrieval, orchestration and interface foundations. Each row identifies contributors, its parent PR and the integration date. Source: GitHub commit and PR records; the selected SHA mapping is retained with the report.]) <fig-foundations>
 
-The sequence clarifies how the architecture emerged. Chau's LightRAG and PostgreSQL changes preceded per-agent containers and document-status handling; An added idle-container shutdown. Khang's agents-as-tools work reached main on 19 June, followed by Tien's AG-UI and generative-interface integration on 7 July. The combined knowledge branch merged on 17 July after additional cleanup, including the removal of the legacy memory and search services. Role-based access and an initial model-discovery implementation followed on 23 July. These are integration milestones, not claims that every associated requirement was fully evaluated.
+Chau's LightRAG and PostgreSQL work preceded per-agent containers and document status; An added idle shutdown. Delegation reached main on 19 June, AG-UI on 7 July and the combined knowledge branch on 17 July, including legacy memory/search removal. Access control and initial model discovery followed on 23 July. These are integration milestones, not completed evaluation claims.
 
-#pagebreak()
 === Product completion and integration
 
 @fig-delivery places subsequent work against the completion plan's phase windows. It separates provisioning, VM migration and gateway routing, and distinguishes provider catalogue management from the later live thinking probe. This exposes dependencies and supporting work that a phase-only chart would conceal. @completion @githubhistory
@@ -20,7 +21,6 @@ The sequence clarifies how the architecture emerged. Chau's LightRAG and Postgre
 
 The live probe was introduced in commit #link("https://github.com/nashtech-garage/ntg-agent/commit/7af467b82ee264c167dd7b5fff1dd88ff1460d8f")[7af467b] on 26 August and integrated with PR 287 on 3 September. The commit replaced a curated thinking-capability list with a test request. This is a meaningful refinement beyond the PR's earlier summary, which still describes catalogue-based gating. The final implementation and commit record therefore provide the more precise account of this feature.
 
-#pagebreak()
 === Delivery against the completion plan
 
 @table-delivery compares planned commitments with observed integration. Phase 2's explicit milestone is 26 August, Phase 3's is 9 September, and Phase 4's is 22 September. The completion plan's embedded Phase 3 Gantt depicts a later endpoint than its prose and milestone table. This report uses the explicit textual dates as its comparison baseline and preserves that discrepancy; it does not infer exact task-level due dates from the conflicting diagram. @completion
@@ -38,7 +38,6 @@ The live probe was introduced in commit #link("https://github.com/nashtech-garag
 
 The record supports a mixed delivery assessment. Access control and skills were integrated before the Phase 2 milestone, while the expanded provider workflow entered main afterwards. The history records continued endpoint, model-selection and thinking-path changes through 26 August, but does not establish why integration occurred on 3 September. A delivery delay can therefore be reported without inventing its cause. Similarly, the 14 September corpus freeze dates an evaluation condition; it is not a benchmark execution date.
 
-#pagebreak()
 === Individual contributions and cross-support
 
 Commit-level attribution adds detail to the responsibility areas confirmed by the team. PR authorship alone would understate shared work: PR 265 was opened by An but contains substantial LightRAG work by Chau, while PR 285 includes Chau's macOS and demonstration-plan changes alongside An's installer. @table-contributions separates primary responsibility from evidenced support. It does not use commit totals as a proxy for effort. @githubhistory

@@ -17,7 +17,6 @@ The corpus provides a development-scale mixture of software and non-software top
 
 The numerical values below are transcribed from the supplied report. They were not recomputed from raw retrieval calls. Captions identify the relevant conditions, and the companion JSON file preserves the plotted values for subsequent verification and editing.
 
-#pagebreak()
 == Retrieval coverage and consistency
 
 All four modes achieved a reported hit\@5 of 1.000 on the six-query validation set and 0.917 on the twelve-query pilot. The pilot value corresponds to eleven successful cases out of twelve and exceeds the completion plan's numerical hit\@5 threshold of 0.80 on this set. @fig-hits shows both hit\@1 and hit\@5, preserving the difference between placing relevant material first and including it within a larger candidate set. @trials
@@ -32,7 +31,6 @@ The source uses both document-level and chunk-level language when describing top
 
 The most informative unsuccessful case is the captive-dependency question, identified as p04 in the query inventory. It was missed by all four modes. The shared failure makes the case useful for inspecting the source passage, chunk construction and expected-answer mapping before attributing the problem to a particular retrieval mode. Its cause cannot be established from the aggregate report alone.
 
-#pagebreak()
 == Latency tradeoffs and cache conditions
 
 The trials expose a clear latency tradeoff even where coverage is equal. In the cold pilot, relative median retrieval latency was 1.0 for naive, 3.4 for local, 3.3 for global and 3.9 for hybrid. In the warm-cache rerun, the corresponding ratios were 1.0, 1.3, 1.3 and 1.8. @fig-latency normalises each trial to its own naive baseline. @trials
@@ -47,7 +45,6 @@ Health checks succeeded in 9 of 9 validation samples, 44 of 44 pilot samples and
 
 The operational implication is to make cache state and measurement boundaries visible in subsequent comparisons. A repeatable evaluation should report absolute timings, distinguish retrieval from full response generation, and record both cold and warm conditions. This would allow the team to connect the observed tradeoffs to the completion plan's service-level targets without changing those targets after the fact.
 
-#pagebreak()
 == Comparison with planned success criteria
 
 @table-targets separates observed results from requirements that need further evidence. This preserves the positive retrieval finding while avoiding an unsupported claim that all performance goals were achieved. @completion @trials
@@ -66,6 +63,6 @@ The operational implication is to make cache state and measurement boundaries vi
 
 The first priority is to preserve and inspect the trial artefacts: query definitions, relevance labels, raw calls, configuration and health samples. This would resolve the hit-definition ambiguity and permit recomputation of the published aggregates. The p04 failure should then be analysed against the exact source passage and retrieved chunks. A corrected scoring definition may change interpretation without changing the underlying system.
 
-The second priority is a small, explicitly judged answer set covering supported answers, missing information and questions that require specialist delegation. Human assessment should examine correctness, use of evidence and appropriate refusal or uncertainty. Retrieval modes should be compared under matched conditions; broader conclusions require a more representative corpus and question distribution.
+The second priority is to evaluate the configured-assistant workflow through paired authorised and unauthorised cases. Retain the caller's roles, specialist bindings and publication state, then test allowed, denied, revoked and unpublished-agent paths. For allowed calls, use the planned human assessment to judge answer correctness and evidence use; for denied calls, inspect both invocation records and returned content. This connects access enforcement and answer quality without confusing their scoring criteria. Include missing-information cases and compare retrieval modes under matched conditions.
 
-The third priority is operational assurance: role-based delegation tests, absolute latency traces, ingestion trials, recovery exercises and conversation-level cost records. Each activity corresponds to an existing requirement. This keeps future work focused on demonstrating the platform's intended behaviour rather than expanding the feature list before the present claims can be validated.
+The third priority is operational assurance: retain delegation records that explain which specialist was called and under whose access decision, and collect absolute latency, ingestion, recovery and conversation-level cost measurements. Multi-turn interface tasks should check input edits and continuation alongside content correctness. These activities close gaps in the existing workflow and original success criteria. Reintroducing long-term memory would be a separate scope decision requiring its own use case and evaluation, rather than a prerequisite for validating the retained solution.

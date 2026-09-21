@@ -1,12 +1,11 @@
 #import "style.typ": *
 #show: report
-#let draft-date = [20 September 2026]
 #page(header: none, footer: none)[
   #align(center)[
     #v(18mm)
-    #text(font: "Liberation Sans", size: 14pt, fill: navy)[RMIT UNIVERSITY]
+    #image("assets/rmit-logo.webp", width: 62mm)
     #v(18mm)
-    #text(font: "Liberation Sans", size: 27pt, weight: "bold", fill: navy)[NTG-agent-vnext]
+    #text(font: "Times New Roman", size: 27pt, weight: "bold", fill: black)[NTG-agent-vnext]
     #v(6mm)
     #text(size: 18pt)[Capstone Final Report]
     #v(3mm)
@@ -27,10 +26,7 @@
     *Industrial supervisors* \
     Nguyen Le Quynh Thien — Technical Manager \
     Nguyen Sieu Anh — Technical Architect
-    #v(1fr)
-    #text(size: 11pt)[Review draft · #draft-date]
-    #v(3mm)
-    #text(size: 9pt)[Evidence snapshot: 20 September 2026.]
+
   ]
 ]
 #counter(page).update(1)
@@ -67,7 +63,7 @@ The twelve weekly journal files are included below for team review. Their propos
 #import "meeting-minutes/template.typ": meeting
 #for entry in meetings {
   pagebreak()
-  set text(font: "Liberation Sans", size: 9pt)
+  set text(font: "Times New Roman", size: 9pt)
   set par(justify: false, leading: 0.4em)
   meeting(entry)
 }

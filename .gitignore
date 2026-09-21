@@ -1,2 +1,5 @@
 # Local Typst preview; the review PDF is versioned under output/pdf/.
 /report/main.pdf
+
+# Locally installed proprietary fonts; do not version extracted font files.
+/report/.fonts/

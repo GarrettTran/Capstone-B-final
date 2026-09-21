@@ -3,7 +3,7 @@
 
 == Review scope and analytical approach
 
-The review examines how existing methods and platforms address five concerns arising from the project: access to external knowledge, specialist orchestration, permission boundaries, configurable interaction, and evaluation. Research papers establish the methodological basis, while official framework and protocol documentation establishes the capabilities of reusable components. The comparison focuses on fit with the project's requirements; it is not an exhaustive survey or a measured ranking of products.
+The review asks how an organisation can configure document-grounded assistants while preserving caller permissions during specialist use. Five related concerns structure the analysis: access to external knowledge, specialist orchestration, permission boundaries, configurable interaction, and evaluation. Research papers establish the methodological basis, while official product, framework and protocol documentation establishes available capabilities. The comparison distinguishes enterprise adoption choices from the framework choices involved in extending the existing application.
 
 The distinction between these sources matters. A research result obtained on a published task set does not establish the performance of the team's corpus or configuration. Similarly, documentation of a supported capability does not prove that the NTG integration exercises it correctly. The review therefore moves from prior work to a design implication and then to an evaluation question that the project can address.
 
@@ -19,7 +19,6 @@ For this project, the central distinction is between retrieving a specific passa
 
 The design implication is to retain a simple baseline and compare it with more elaborate modes under matched conditions. Additional indexing and retrieval stages should be justified by their contribution to the task, including response quality and processing cost. The team's use of LightRAG's built-in modes is consequently assessed as a bounded integration choice; the original plan's additional keyword and reranking stages are not treated as necessary merely because they were initially proposed.
 
-#pagebreak()
 == Knowledge boundaries and specialist orchestration
 
 Retrieval relevance and retrieval permission answer different questions. A result may be highly relevant yet outside the information scope intended for a particular assistant or caller. Ferraiolo and Kuhn's role-based access-control model provides a foundation for organising permission around organisational roles. @rbac Applied to NTG-agent-vnext, the relevant design question is where the access decision is enforced when an assistant invokes another capability. Role configuration alone would be insufficient if indirect invocation bypassed it.
@@ -38,10 +37,27 @@ This choice can be compared with a single agent holding all tools, or with an ex
 
 The contract nevertheless has costs. A delegated call can add model and retrieval work, and the outer agent must interpret the child's response. Returning an answer also compresses the underlying evidence, making provenance and error handling important. These tradeoffs lead to two questions for the evaluation: does the runtime enforce caller access at both tool exposure and invocation, and does the composed answer preserve the relevant evidence from the specialist? The inspected code addresses the first structurally; the second requires judged end-to-end tasks.
 
-#pagebreak()
+== Enterprise adoption and deployment choices
+
+An organisation first needs to decide how the assistant capability will be operated and administered. This precedes the choice of an orchestration framework. Microsoft Copilot Studio offers a graphical environment for building agents and connecting knowledge and tools within the Microsoft ecosystem. Its documented knowledge-source authentication can restrict retrieved content to the requesting user's access for supported sources. Permission-aware enterprise assistance is therefore an existing product capability, not a gap unique to this project. @copilotstudio @copilotknowledge
+
+Dify provides a different adoption route: an application platform with workflows, retrieval and model integration that can be self-hosted. @dify Self-hosting changes who operates the application, but does not by itself establish the permissions of every knowledge or tool request. An adoption assessment must examine the chosen edition, identity integration and runtime access paths. It would be misleading to infer either complete governance or its absence from the hosting model alone.
+
+@table-adoption compares these routes with extending NTG Agent along the same decision dimensions. The final column describes the inspected project, while the adoption implications are this report's interpretation of the requirements and documented capabilities. No product trial or comparative cost study was supplied.
+
+#tab((0.9fr, 1.25fr, 1.25fr, 1.4fr), ([Dimension], [Managed product: Copilot Studio], [Self-hosted platform: Dify], [Extend NTG Agent]), (
+  [Application operation], [Adopt the vendor's agent-building service and administration model.], [Deploy and maintain the application platform on selected infrastructure.], [Maintain the existing .NET application and per-agent knowledge services.],
+  [Knowledge and access], [Configure knowledge sources and supported user-authenticated access.], [Map required user and knowledge permissions to the selected edition and integration.], [Configure agent ownership, publication and roles; check specialist access during delegation.],
+  [Extension approach], [Use the product's authoring and integration mechanisms.], [Use platform workflows, models and tools.], [Extend source code and bind application-specific tools, skills and surfaces.],
+  [Data-processing review], [Examine each knowledge source and its authentication and processing path.], [Review configured model and tool destinations alongside application hosting.], [Distinguish hosted storage from external generation and embedding services.],
+  [Project implication], [Evaluate fit with the existing identity, administration and workflow needs.], [Evaluate migration and operational work alongside feature fit.], [Retain the foundation while taking responsibility for integration and behavioural validation.],
+), [Enterprise adoption routes and their implications for the project's configured-assistant workflow. Product capabilities are documented; project fit is an analytical assessment.]) <table-adoption>
+
+For NTG-agent-vnext, extending the existing application preserves its .NET foundation while making agent ownership, delegated access and task interaction explicit in its own administrative model. This is a rationale for implementation continuity and control over application behaviour, not a claim of superior security or lower cost. It also creates obligations: the team must maintain the services and demonstrate that configured boundaries remain effective in actual requests. These obligations lead directly to the design and evaluation questions below.
+
 == Platform alternatives and implementation fit
 
-The platform decision concerns what to adopt as a foundation and what remains application-specific. Dify provides an application-building environment with workflows, RAG facilities and model/tool integration. Microsoft Agent Framework supplies agent and workflow abstractions for application development, including the .NET environment used by the project. LangGraph emphasises stateful orchestration and durable execution. @dify @maf @langgraph These options occupy different layers, so their documented strengths are compared along the same project-relevant dimensions in @table-platforms.
+Once the decision is to extend an application, a second question concerns reusable implementation foundations. Microsoft Agent Framework supplies agent and workflow abstractions for application development, including the .NET environment used by the project. LangGraph emphasises stateful orchestration and durable execution. @maf @langgraph Dify remains a platform-level alternative rather than a like-for-like library replacement. @table-platforms makes these different adoption units explicit and identifies the application-specific work that remains.
 
 #tab((1fr, 1.3fr, 1.45fr, 1.5fr), ([Dimension], [Dify], [Microsoft Agent Framework], [LangGraph]), (
   [Adoption unit], [An application platform and associated workflow environment.], [Agent and workflow building blocks integrated into application code.], [A stateful orchestration framework integrated into application code.],
@@ -54,9 +70,8 @@ Continuing with Microsoft Agent Framework can therefore be justified by continui
 
 Provider flexibility introduces another integration boundary. The GitHub record documents endpoint-routing fixes, global provider configuration, curated model selection and finally live thinking probes. @githubhistory These changes support a practical distinction between catalogue discovery and request compatibility. The former identifies what an endpoint advertises; the latter checks a selected option through an actual request path. A successful probe still does not compare the quality of different providers' reasoning, and its validity is bounded by the tested endpoint and configuration.
 
-The market-review conclusion is consequently an integration gap specific to this project, rather than a claim that configurable assistants are absent from the market. Existing platforms and frameworks supply substantial capabilities. NTG-agent-vnext combines a particular set of requirements within an inherited application: agent-owned knowledge, caller-aware delegation, configurable providers, reusable skills and an interactive client. The report evaluates that combination and the work required to make its boundaries consistent.
+The combined market and framework review identifies an integration need specific to this project: administrators should be able to configure document-grounded specialists whose use remains governed by the caller's permissions. Agent-owned knowledge and access-aware delegation address that need; configurable providers and reusable interactive skills make the workflow extensible. Existing products already supply substantial related capabilities. The report therefore evaluates this integration within the inherited application rather than asserting that comparable assistants are absent from the market.
 
-#pagebreak()
 == Interaction protocols and reusable task skills
 
 A tool-capable assistant needs a way to communicate more than final text. AG-UI defines an event-oriented connection between an agent backend and a user-facing application, including streamed activity and state interaction. A2UI supplies a declarative representation of interfaces rendered by compatible clients. @agui @a2ui Their roles are complementary: one concerns the interaction stream, while the other concerns the structure of a surface carried through the application.
@@ -71,7 +86,6 @@ Three interaction strategies emerge. Plain text remains suitable when an answer 
 
 Template validation and task correctness must still be separated. A surface can satisfy a component schema while presenting an incorrect recommendation, and a plausible recommendation can appear in a form with unusable bindings. The project's validator addresses structural constraints such as references and seeded input paths. Human task assessment and runtime interaction checks address the separate questions of whether the content is correct and the workflow is useful. This division gives a concrete evaluation purpose to the separation between model output, transport and rendering.
 
-#pagebreak()
 == Evaluation synthesis and design questions
 
 RAG evaluation must distinguish whether relevant material was retrieved, whether the answer is supported by that material, and whether it answers the question correctly. RAGAs presents a framework for evaluating several dimensions of RAG pipelines, including context relevance, faithfulness and answer relevance. @ragas These dimensions inform the report's analysis, but RAGAs was not executed for the supplied trials. Its relevance is methodological: one favourable metric should not stand in for the entire application outcome.

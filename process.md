@@ -8,6 +8,7 @@ Updated: 20 September 2026. This document records the writing workflow, user-con
 - Project: **NTG-agent-vnext**; team: **QUOTA**; industry partner: **NashTech**.
 - Repository: https://github.com/nashtech-garage/ntg-agent.
 - Write in academic English, using Typst and IEEE references. Retain the required template structure while improving readability and consistency.
+- **Presentation preference (21 September 2026):** omit “Review draft” and implementation/trial-evidence or market-review update lines from the report cover and running header. Keep evidence provenance in the relevant body content and working notes.
 - **The assessed body MUST be fewer than 20 pages.** Per the user's supplied rule, exclude the cover page, table of contents, references, tables and figures within the body, appendices, and meeting journals. This overrides earlier recommended section lengths where they conflict.
 - Aim for approximately 16.5 pages of assessed prose: executive summary 1, background 1.5, literature/market review 3, solution design 6, results/discussion 4, reflection 1. Do not pad Results with unsupported performance claims.
 - Also aim to keep the complete main body, including visuals, within 19 physical pages as a conservative working budget. Move extensive evidence to appendices; do not shrink text to achieve the budget. Report the actual count and exclusions at final review.
@@ -191,3 +192,23 @@ The user approved the existing content, requested deeper alignment with reviewed
 - Durable reasoning and source map: `KB/literature-and-needs-synthesis.md`. Added source files: `report/sections/04-runtime.typ` and `05-accomplishments.typ`.
 - Expanded draft: 25 main-body pages and 45 physical pages, with six figures and thirteen tables (ten main-body, three appendix). This is intentionally an expansion draft, not the page-budgeted submission version.
 - Compiled and visually reviewed the expanded sections and bibliography. No application tests, deployment checks or benchmark reruns were performed.
+
+
+## 14. Presentation-aligned narrative — 21 September 2026
+
+The user confirmed `presentation-flow.md` as the flow used for the presentation, approved the mismatch review and requested the report revision. This establishes narrative context, not completion of the flow's prospective measurements.
+
+- Reframed Sections 1–6 around administrator-configured, document-grounded assistants with caller-aware delegation. Providers, skills and setup remain substantive enabling contributions.
+- Added enterprise adoption analysis using verified official Copilot Studio and Dify sources, separately from the framework comparison. Added a workflow claim-to-evidence matrix before the retrieval trials.
+- Preserved all reported trial values and original success criteria; no script placeholders or proposed containment results became measured outcomes. Kept knowledge ownership distinct from authorised information transfer, and authored skill templates distinct from generated surfaces.
+- Kept the implementation/trial cutoff at 20 September while dating the narrative/market review 21 September. Contribution records, scope deviations and provisional journals retain their evidence status.
+- Compiled and reviewed `output/pdf/capstone-final-report-draft.pdf`: 27 main-body pages, 48 physical pages, six figures and fifteen tables. The expanded working-draft exception still applies; final page optimisation remains deferred. No application tests or benchmark rerun.
+- Detailed decisions and source links: `KB/presentation-report-alignment.md`.
+
+## 15. Report font — 21 September 2026
+
+The user requested Times New Roman. Report body, headings, cover, running header and embedded journal text now use this family, with existing sizes, spacing and margins preserved. Local fonts are supplied through `--font-path report/.fonts`; see `report/README.md`. Existing SVG labels and standalone journal styles are unchanged. Recheck prose pagination after this typography change.
+
+## 16. Layout refinement — 21 September 2026
+
+The user approved black headings (including cover titles), 10 pt table text and captions, removal of manual within-chapter page breaks, and explicit paragraph spacing. Applied paragraph spacing is 6 pt; body font remains Times New Roman 11 pt with 0.58 em leading and unchanged margins. Chapter breaks, appendix organization and one-page-per-week journal breaks are retained. The compiled main body now spans 25 pages including visuals; the prose-only diagnostic preserving chapter breaks spans 17 pages. Rendered body, reference and appendix pages were reviewed for layout, caption placement and table wrapping. No application tests were needed.

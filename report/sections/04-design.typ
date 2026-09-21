@@ -20,20 +20,20 @@ The isolation change makes the agent the unit of knowledge configuration and del
 
 The original evaluation targets are retained for comparison rather than revised after observing the trials. They cover hit\@5 and human-rated quality, ingestion percentiles, time to first token, complete response latency, availability, recovery and cost. Section 5 reports which of these have corresponding measurements. A changed implementation scope does not silently redefine a target as achieved.
 
-#pagebreak()
 == System architecture
 
-The architecture separates administration, conversational interaction, orchestration and knowledge services. Figure 1 presents these responsibilities and their principal relationships. The administrative interface configures providers, agents, access roles, tool bindings and skills. The user-facing client sends requests and receives streamed responses and interface events. The backend constructs the configured agent and mediates its access to model providers and tools.
+The architecture implements the configured-assistant journey introduced in Section 2. An administrator selects a provider and model, assigns knowledge and access roles, and binds tools or skills. A user then sends a request to an available outer agent. The backend constructs that agent, attaches its scoped retrieval capability and exposes eligible specialists; the client receives the resulting text or supported interface events. Figure 1 locates these steps across administration, conversational interaction, orchestration and knowledge services.
 
 #fig("assets/system-architecture.svg", [System overview derived from the inspected implementation. Dedicated LightRAG containers use agent-specific workspaces within shared PostgreSQL infrastructure.])
 
 Application data and agent configuration are persisted separately from the runtime conversation flow. Knowledge requests pass through an agent-scoped gateway to the relevant LightRAG service. Dedicated containers do not imply physically independent database servers: the inspected configuration uses shared PostgreSQL storage with workspace scoping. This distinction is important when describing the security boundary and the operational consequences of the design.
 
+Storage control and model processing are separate boundaries. The configured deployment hosts the knowledge services and their storage, while the supplied trial configuration uses Azure OpenAI for generation and embeddings. Document content is processed by the embedding service during ingestion, and retrieved context is supplied to generation. Hosting the knowledge store therefore does not establish that all document processing remains within the host's infrastructure. Provider selection is an administrative control over these dependencies, not evidence of an air-gapped deployment. @implementation @trials
+
 The platform also integrates external tools, including MCP-connected capabilities. These are reusable building blocks; the team's contribution lies in configuring and connecting them to the agent runtime and administrative workflow. Framework capabilities are therefore distinguished from application-specific work such as determining which inner agents a user can invoke.
 
 Failures can occur at several boundaries: the provider may reject a request, an inner agent may be unavailable, or a knowledge container may need to start before serving a query. The inspected implementation contains access checks, provider error handling and knowledge-service readiness logic. These mechanisms describe intended runtime behaviour. Their existence is not treated as proof of a recovery-time target or complete fault tolerance.
 
-#pagebreak()
 == Knowledge ownership and authorised delegation
 
 Each knowledge-enabled agent receives a LightRAG service addressed through its agent identifier. The container manager derives a workspace identifier for the agent and configures PostgreSQL-backed storage. Document ingestion associates the uploaded original with the agent and document identifiers, then submits processing work to LightRAG and tracks its asynchronous progress. This allows upload acceptance to be distinguished from completed indexing.
@@ -44,12 +44,12 @@ Delegation preserves the same ownership model. An outer agent exposes only eligi
 
 This design separates permission to invoke a specialist from direct access to the specialist's retrieval client. The access service considers publication state and the configured owner, administrator or role-based permissions. Checking access at tool construction limits exposed capabilities; checking again at invocation reduces dependence on an earlier decision remaining valid.
 
+Three decisions must remain distinct: the agent identifier determines the retrieval context; the caller's access determines whether the specialist can be invoked; and the specialist's answer carries information back through an authorised call. Excluding an inner agent from direct chat supports this invocation structure, but does not replace the access decision. A successful composed answer should consequently be evaluated together with the identity and permissions under which it was produced.
+
 The remaining validation requirement is behavioural. A convincing access-control evaluation should exercise users with and without the required role, revoked access, unpublished inner agents and cross-agent document requests. It should also test whether returned content follows the intended information-sharing policy. An authorised inner-agent invocation is designed to return information; isolation is therefore a controlled delegation boundary, not a claim that information can never flow between agents.
 
 Container separation and workspace scoping also depend on correct routing and credentials. The report does not claim independent physical tenancy, a penetration-test result or resistance to prompt injection. These are separate assurance questions requiring evidence beyond the inspected control paths.
 
-#pagebreak()
 #include "04-runtime.typ"
 
-#pagebreak()
 #include "04-delivery.typ"

@@ -12,7 +12,6 @@ There is also a consistency requirement between probing and use. A probe impleme
 
 The implemented workflow answers DQ3 by making provider/model decisions explicit and testable. Its next acceptance checks should cover successful discovery, unavailable catalogues, permission failures, accepted and rejected thinking requests, and saved agent settings. Output quality remains a separate evaluation dimension. This distinction allows administrators to select a usable configuration without representing compatibility as a ranking of model intelligence.
 
-#pagebreak()
 == Skills and interactive responses
 
 A skill is stored as a package of task instructions and supporting assets that an administrator imports and binds to an agent. PR 286 added the storage, administrative API, interface and runtime path for these packages. At the start of a run, the agent receives a compact catalogue of bound skill names and descriptions. The #raw("load_skill") tool supplies the detailed instructions when a skill is needed, while #raw("render_skill_surface") renders an authored template with task-specific values. @githubhistory @implementation
@@ -21,13 +20,14 @@ This progressive loading has a specific purpose: every bound skill need not cont
 
 The presentation path retains two forms of declarative output. The general #raw("render_a2ui") tool can construct a surface against the supported catalogue. The skill path uses a template authored in advance and changes its data at runtime. For a repeated multi-step flow, the latter keeps the input fields and layout stable while allowing the model to supply the relevant content. The travel-planning and ticket-booking packages demonstrate this pattern using synthetic data.
 
+The practical change is where task-specific interface work occurs. The earlier per-tool approach required a corresponding frontend component; supported declarative surfaces can instead reuse the client renderer and component catalogue. Skill authors still define templates, input bindings and instructions. The contribution is therefore configurable interaction without a bespoke frontend component for each supported task variation, rather than an interface that required no human authoring. This complements the administrator's ability to configure knowledge and delegation within the same platform.
+
 Validation occurs at import as well as during rendering. The package importer checks archive entries and rejects problematic paths and duplicates. The surface validator checks component structure, references and data bindings. In particular, input paths need seeded values: an apparently valid control can otherwise render without a usable update target. This is a concrete example of an interface failure that cannot be detected by judging the model's text alone.
 
 PR 286 also addresses continuity and client differences. Stable surface identifiers allow an updated skill surface to remain in the existing card, and skill surfaces have a replay path after a page reload. Generative output is gated by what the client can render, avoiding the display of protocol payloads as ordinary assistant text. These changes connect DQ4 to an explicit interaction contract: a surface must remain addressable, its fields must function, and unsupported clients must receive appropriate handling.
 
 The package format is intentionally constrained. Executable scripts are outside the supported skill path, and structural checks do not establish that every instruction is trustworthy. The remaining questions concern content and use: whether a skill chooses the right next step, preserves user selections and produces a correct result. Tests of the importer and surface schema provide one layer of evidence; live multi-turn tasks and human assessment provide the complementary layer. No general prompt-injection resistance or real booking functionality is claimed.
 
-#pagebreak()
 == Operability and development support
 
 The platform's resource model makes lifecycle management part of the user experience. A knowledge-enabled agent may need a container to be provisioned, an indexing job to finish or a service to become ready before a query can succeed. The GitHub record distinguishes these concerns: PR 265 includes per-agent containers, document-status handling and idle shutdown, while PR 282 adds provisioning-state work, VM migration and gateway routing. @githubhistory
